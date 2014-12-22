@@ -6,11 +6,60 @@
 	<string>pstadler/alfred-cask</string>
 	<key>connections</key>
 	<dict>
+		<key>09807F64-FB75-4056-8F05-DA7DCA0F9DE4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5AE4CFF7-0AEA-48B7-9819-67867869CBF1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>301B168C-3E07-4E75-AF12-4992B03B3FCE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3B9AF273-33A6-49D4-B50C-071706751E93</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open homepage in browser</string>
+			</dict>
+		</array>
+		<key>301B168C-3E07-4E75-AF12-4992B03B3FCE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CB62E9FB-68F2-496F-BEB0-E88D9910E8B5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>4C3CDB74-D2A9-4D1A-A766-D30B2383CD8A</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>B718BDC0-8149-4EF2-A7FA-0B2F93BE9DA8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>5AE4CFF7-0AEA-48B7-9819-67867869CBF1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>499CA864-08D4-4F37-A50A-3F5EB6486F1C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -69,6 +118,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>./cask.sh notify "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4C3CDB74-D2A9-4D1A-A766-D30B2383CD8A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -94,17 +160,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string>./cask.sh notify "{query}"</string>
-				<key>type</key>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
 				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>title</key>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>4C3CDB74-D2A9-4D1A-A766-D30B2383CD8A</string>
+			<string>E4DE31E1-079E-4992-88A8-1568E129E671</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -157,6 +229,65 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>./cask.sh home "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>59C16933-6AD5-4261-AAB4-8996988E9E2D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>You'll get notified when done.</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>499CA864-08D4-4F37-A50A-3F5EB6486F1C</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>./brew.sh notify "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5AE4CFF7-0AEA-48B7-9819-67867869CBF1</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -173,7 +304,53 @@
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>E4DE31E1-079E-4992-88A8-1568E129E671</string>
+			<string>CB62E9FB-68F2-496F-BEB0-E88D9910E8B5</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>brew</string>
+				<key>runningsubtext</key>
+				<string>Searching for brews...</string>
+				<key>script</key>
+				<string>./brew.sh list "{query}"</string>
+				<key>subtext</key>
+				<string>Manage packages with homebrew</string>
+				<key>title</key>
+				<string>Homebrew</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>09807F64-FB75-4056-8F05-DA7DCA0F9DE4</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>./brew.sh execute "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>301B168C-3E07-4E75-AF12-4992B03B3FCE</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -190,7 +367,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>59C16933-6AD5-4261-AAB4-8996988E9E2D</string>
+			<string>3B9AF273-33A6-49D4-B50C-071706751E93</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -199,6 +376,26 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>09807F64-FB75-4056-8F05-DA7DCA0F9DE4</key>
+		<dict>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
+		<key>301B168C-3E07-4E75-AF12-4992B03B3FCE</key>
+		<dict>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
+		<key>3B9AF273-33A6-49D4-B50C-071706751E93</key>
+		<dict>
+			<key>ypos</key>
+			<real>610</real>
+		</dict>
+		<key>499CA864-08D4-4F37-A50A-3F5EB6486F1C</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
 		<key>4C3CDB74-D2A9-4D1A-A766-D30B2383CD8A</key>
 		<dict>
 			<key>ypos</key>
@@ -208,6 +405,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>250</real>
+		</dict>
+		<key>5AE4CFF7-0AEA-48B7-9819-67867869CBF1</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
 		</dict>
 		<key>6857F82A-8D39-4F61-BD4F-1FA51E550B48</key>
 		<dict>
@@ -223,6 +425,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
+		</dict>
+		<key>CB62E9FB-68F2-496F-BEB0-E88D9910E8B5</key>
+		<dict>
+			<key>ypos</key>
+			<real>490</real>
 		</dict>
 		<key>E4DE31E1-079E-4992-88A8-1568E129E671</key>
 		<dict>
